@@ -1,7 +1,7 @@
 # calculator
 A calculator where you can use the basic operators (sum, subtract, multiply and divide)
 
-# Live DEMO
+# live demo
 In progress
 
 # technologies used
