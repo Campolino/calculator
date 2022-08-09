@@ -17,6 +17,7 @@
   border-radius: 15px;
   margin-bottom: 20px;
   background-color: white;
+  min-height: 73px;
 }
 
 #title {
@@ -48,8 +49,7 @@
   grid-template-columns: 1f;
 }
 
-.number,
-.operation {
+button {
   padding: 20px;
   border-radius: 5px;
   border: 0.5px solid rgb(78, 73, 73);
@@ -57,5 +57,31 @@
 
 button:hover {
   cursor: pointer;
-  background-color: rgb(216, 206, 206);
+  background-color: rgb(168, 145, 145);
+}
+
+.display-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#delete {
+  background-color: rgb(209, 66, 66);
+}
+
+#delete:hover {
+  background-color: rgb(190, 54, 54);
+}
+
+#equal {
+  background-color: rgb(104, 104, 245);
+}
+
+#equal:hover {
+  background-color: rgb(51, 51, 209);
+}
+
+#delete,
+#equal {
+  color: white;
 }
