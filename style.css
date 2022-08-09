@@ -1,0 +1,87 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: rgb(78, 73, 73);
+}
+
+.display {
+  border: 1px solid blue;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: white;
+  min-height: 73px;
+}
+
+#title {
+  padding: 10px;
+  font-size: 24px;
+}
+
+#subtitle {
+  padding: 10px 10px 0 10px;
+  font-size: 14px;
+}
+
+#title,
+#subtitle {
+  text-align: end;
+}
+
+.main {
+  display: flex;
+}
+
+.numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.operations {
+  display: grid;
+  grid-template-columns: 1f;
+}
+
+button {
+  padding: 20px;
+  border-radius: 5px;
+  border: 0.5px solid rgb(78, 73, 73);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(168, 145, 145);
+}
+
+.display-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#delete {
+  background-color: rgb(209, 66, 66);
+}
+
+#delete:hover {
+  background-color: rgb(190, 54, 54);
+}
+
+#equal {
+  background-color: rgb(104, 104, 245);
+}
+
+#equal:hover {
+  background-color: rgb(51, 51, 209);
+}
+
+#delete,
+#equal {
+  color: white;
+}
