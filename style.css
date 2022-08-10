@@ -17,21 +17,22 @@
   border-radius: 15px;
   margin-bottom: 20px;
   background-color: white;
-  min-height: 73px;
 }
 
-#title {
+#current-number {
   padding: 10px;
   font-size: 24px;
+  height: 27px;
 }
 
-#subtitle {
+#previous-number {
   padding: 10px 10px 0 10px;
   font-size: 14px;
+  height: 16px;
 }
 
-#title,
-#subtitle {
+#current-number,
+#previous-number {
   text-align: end;
 }
 
