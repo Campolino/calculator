@@ -33,9 +33,15 @@ function displayOperation(operation) {
 
 function displayResult() {  
   if(op === undefined || currentNumber.length == 0) return;
-  previousOperand.textContent = `${lastNumber} ${op} ${currentNumber}`;
-  currentOperand.textContent = `${calculateResult()}`;
-  op = undefined;
+  if(isFinite(calculateResult())) {
+    previousOperand.textContent = `${lastNumber} ${op} ${currentNumber}`;
+    currentOperand.textContent = `${calculateResult()}`;
+    op = undefined;
+  } else {
+    clearAllOperation();
+    previousOperand.textContent = 'Impossible division';
+  }
+  
 }
 
 function deleteOperand() {
