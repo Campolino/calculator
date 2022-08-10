@@ -42,7 +42,6 @@ function deleteOperand() {
   if(currentNumber.length == 0) return;
   currentOperand.textContent = currentOperand.textContent.slice(0, -1);
   currentNumber = currentNumber.slice(0, -1);
-  console.log(typeof(currentNumber));
 }
 
 function clearAllOperation() {
