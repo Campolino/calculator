@@ -23,7 +23,7 @@ function displayNumber(number) {
 }
 
 function displayOperation(operation) {
-  if(op !== undefined) return;
+  if(op !== undefined || currentNumber.length == 0) return;
   lastNumber = currentOperand.textContent;
   currentNumber = '';
   op = operation;
@@ -32,8 +32,24 @@ function displayOperation(operation) {
 }
 
 function displayResult() {  
+  if(op === undefined || currentNumber.length == 0) return;
   previousOperand.textContent = `${lastNumber} ${op} ${currentNumber}`;
   currentOperand.textContent = `${calculateResult()}`;
+  op = undefined;
+}
+
+function deleteOperand() {
+  if(currentNumber.length == 0) return;
+  currentOperand.textContent = currentOperand.textContent.slice(0, -1);
+  currentNumber = currentNumber.slice(0, -1);
+  console.log(typeof(currentNumber));
+}
+
+function clearAllOperation() {
+  currentOperand.textContent = '';
+  previousOperand.textContent = '';
+  currentNumber = '';
+  lastNumber = '';
   op = undefined;
 }
 
@@ -65,11 +81,13 @@ numbers.forEach(number => {
 });
 
 operations.forEach(operation => {
-  operation.addEventListener('click', () => {
-    displayOperation(operation.textContent);
-  });
+  operation.addEventListener('click', () => 
+    displayOperation(operation.textContent)
+  );
 });
 
-equal.addEventListener('click', () => {
-  displayResult();
-});
+equal.addEventListener('click', () => displayResult());
+
+del.addEventListener('click', () => deleteOperand());
+
+clearAll.addEventListener('click', () => clearAllOperation());
