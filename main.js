@@ -64,16 +64,16 @@ function calculateResult() {
   let result = 0;
   switch (op) {
     case '+':
-      result = first + second;
+      result = (first + second).toFixed(2);
       break;
     case '-':
-      result = first - second;
+      result = (first - second).toFixed(2);
       break;
     case '*':
-      result = Math.floor((first * second) * 100) / 100;
+      result = (first * second).toFixed(2);
       break;
     case '/':
-      result = Math.floor((first / second) * 100) / 100;
+      result = (first / second).toFixed(2);
       break;
   }
   return result;
